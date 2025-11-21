@@ -1,0 +1,868 @@
+/* Dashboard Header */
+#dashboardHeader {
+  background-color: #7fc8f8; /* light sky blue header */
+  color: white;
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Offcanvas Menu Background */
+#offcanvasMenu {
+  width: 250px;
+}
+
+/* Offcanvas Header */
+#offcanvasMenu .offcanvas-header {
+  background-color: lightskyblue;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+#offcanvasMenu .offcanvas-title {
+  font-weight: 700;
+}
+
+/* Close Button */
+#offcanvasMenu .btn-close {
+  filter: brightness(0) invert(1); /* white close button */
+}
+
+/* Offcanvas Body */
+#offcanvasMenu .offcanvas-body {
+  background-color: #f8f9fa; /* light background */
+  padding-top: 20px;
+  height: 100%;
+}
+
+/* Menu List */
+#offcanvasMenu ul {
+  padding-left: 0;
+}
+
+#offcanvasMenu ul li {
+  margin-bottom: 15px;
+}
+
+#offcanvasMenu ul li a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#offcanvasMenu ul li a:hover {
+  background-color: lightskyblue;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Optional: Responsive for smaller screens */
+@media (max-width: 576px) {
+  #offcanvasMenu {
+    width: 220px;
+  }
+}
+
+
+#dashboardHeader h1 {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: white; /* white text on header */
+  font-size: 32px;
+}
+
+#dashboardHeader {
+  background-color: #7fc8f8;
+  color: white;
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#dashboardHeader h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: white;
+  font-size: 32px;
+}
+
+#dashboardMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#dashboardMenu .nav-link {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#dashboardMenu .nav-link:hover {
+  background-color: deepskyblue;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+#dashboardMenu .login-btn a {
+  background-color: rgb(226, 30, 30);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#dashboardMenu .login-btn a:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #dashboardMenu {
+    flex-direction: column;
+    gap: 5px;
+  }
+  #dashboardMenu .login-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Section Headings */
+#dashboardContent h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  border-bottom: 2px solid lightskyblue;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Card Styles */
+.custom-card {
+  border: none;
+  border-radius: 12px;
+  background: #7fc8f857; /* subtle light background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Card Headings */
+.custom-card h5 {
+  font-weight: 600;
+  color: #007bff; /* blue titles */
+  margin-bottom: 10px;
+}
+
+/* Card Paragraphs */
+.custom-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.custom-card .btn {
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-card .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Row Spacing */
+.internships-section .row,
+.applications-section .row {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #dashboardContent h2 {
+    font-size: 22px;
+  }
+  .custom-card h5 {
+    font-size: 16px;
+  }
+}
+
+
+/* add internship area css  */
+#addInternship h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+#addInternship .card {
+  border-radius: 12px;
+  background-color: #f0f8ff7f; /* subtle light background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#addInternship .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#addInternship .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+#addInternship .form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+#addInternship .form-control:focus {
+  border-color: lightskyblue;
+  box-shadow: 0 0 5px rgba(135,206,250,0.5);
+}
+
+#addInternship .btn {
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#addInternship .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  #addInternship .card {
+    padding: 20px;
+  }
+}
+
+
+/* Footer Style */
+.dashboard-footer {
+  background-color: #7fc8f8; /* light gray background */
+  color: #555; /* dark gray text */
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  padding: 40px 0px;
+  
+}
+
+.dashboard-footer p {
+  margin: 0;
+}
+
+/* Optional: Responsive padding for smaller screens */
+@media (max-width: 576px) {
+  .dashboard-footer {
+    padding: 20px 10px;
+  }
+}
+
+/* manage student area css  */
+
+#manageStudents h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Card Styles */
+#manageStudents .card {
+  border-radius: 12px;
+  background-color: #f0f8ff7f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#manageStudents .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Form Labels & Inputs */
+#manageStudents .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+#manageStudents .form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+#manageStudents .form-control:focus {
+  border-color: lightskyblue;
+  box-shadow: 0 0 5px rgba(135,206,250,0.5);
+}
+
+/* Buttons */
+#manageStudents .btn {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+#manageStudents .btn-primary {
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+}
+
+#manageStudents .btn-primary:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+#manageStudents .btn-warning {
+  background-color: #ffb500;
+  border: none;
+  color: #fff;
+}
+
+#manageStudents .btn-warning:hover {
+  background-color: #ffa500;
+  transform: translateY(-2px);
+}
+
+#manageStudents .btn-danger {
+  background-color: #e41e1e;
+  border: none;
+  color: #fff;
+}
+
+#manageStudents .btn-danger:hover {
+  background-color: #c70000;
+  transform: translateY(-2px);
+}
+
+/* Table */
+#manageStudents table th, 
+#manageStudents table td {
+  vertical-align: middle;
+}
+
+#manageStudents .table-hover tbody tr:hover {
+  background-color: #f1f9ff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  #manageStudents .card {
+    padding: 20px;
+  }
+  #manageStudents table {
+    font-size: 14px;
+  }
+}
+
+
+/* my profile section css  */
+
+#myProfile {
+  background-color: #f0f8ff1a; /* subtle full-width background */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#myProfile h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Card Styling */
+#myProfile .card {
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#myProfile .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Form Labels & Inputs */
+#myProfile .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+#myProfile .form-control,
+#myProfile .form-control-file,
+#myProfile textarea {
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+#myProfile .form-control:focus,
+#myProfile textarea:focus {
+  border-color: lightskyblue;
+  box-shadow: 0 0 5px rgba(135,206,250,0.5);
+}
+
+/* Buttons */
+#myProfile .btn {
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#myProfile .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  #myProfile .card {
+    padding: 20px;
+  }
+  #myProfile .form-control,
+  #myProfile textarea {
+    font-size: 14px;
+  }
+}
+
+
+
+
+    
+
+    
+    #studentRegister {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#studentRegister h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+#studentRegister .card {
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#studentRegister .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#studentRegister .form-control {
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+#studentRegister .form-control:focus {
+  border-color: lightskyblue;
+  box-shadow: 0 0 5px rgba(135,206,250,0.5);
+}
+
+#studentRegister .btn {
+  border-radius: 50px;
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+#studentRegister .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+#studentRegister a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+#studentRegister a:hover {
+  color: deepskyblue;
+  text-decoration: underline;
+}
+
+/* internship area css  */
+
+#internshipListings {
+  background-color: #f0f8ff1a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#internshipListings h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+#internshipListings .card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+#internshipListings .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#internshipListings .card-title {
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+#internshipListings p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#internshipListings .btn {
+  border-radius: 50px;
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#internshipListings .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Responsive spacing */
+@media (max-width: 992px) {
+  #internshipListings .col-lg-3 {
+    margin-bottom: 20px;
+  }
+}  
+
+
+/* student dasboard css  */
+
+#studentDashboard {
+  background-color: #f0f8ff1a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#studentDashboard h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  border-bottom: 2px solid lightskyblue;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Common card styles */
+#studentDashboard .card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+#studentDashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Application cards */
+#studentDashboard .application-card h5 {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#studentDashboard .application-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Recommended cards */
+#studentDashboard .recommended-card h5 {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#studentDashboard .recommended-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#studentDashboard .recommended-card .btn {
+  border-radius: 50px;
+  background-color: lightskyblue;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#studentDashboard .recommended-card .btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #studentDashboard .col-lg-4 {
+    margin-bottom: 20px;
+  }
+}
+
+/* student apply css  */
+
+* Section Background */
+#student-apply {
+  background-color: #f0f8ff3a;
+}
+
+/* Card Box */
+#student-apply .apply-box {
+  max-width: 600px;
+  border-radius: 15px;
+  background: #fff;
+  transition: 0.3s ease;
+  border-top: 4px solid lightskyblue;
+}
+
+#student-apply .apply-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Title */
+#student-apply h2 {
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid lightskyblue;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Submit Button */
+#student-apply .submit-btn {
+  background-color: lightskyblue;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+#student-apply .submit-btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+}
+
+
+/* chart admin section  */
+
+.card {
+        background-color: #e6f7ff;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h5 {
+        color: #00008b;
+        font-weight: 600;
+    }
+    .card p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .chart-container {
+        background-color: #e6f7ff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+
+    /* login form btn css  */
+
+    .login-form .login-custom{
+        background-color: lightskyblue;
+        border: none;   
+        font-size: 18px;    
+        color: #fff;
+    }
+    .login-form .login-custom:hover{
+        background-color: rgb(153, 212, 248);
+        border: none;       
+    }
+
+
+    /* Card Styling */
+#loginChoice .login-choice-card {
+  background-color: #fff;
+  border-top: 4px solid lightskyblue;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loginChoice .login-choice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+#loginChoice .login-btn {
+  background-color: lightskyblue;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+#loginChoice .login-btn:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+} 
+
+
+
+/* student and login form css  */
+
+
+.login-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+.login-card h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid lightskyblue;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Input Fields */
+.login-card .form-control {
+    margin-bottom: 15px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card .form-control:focus {
+    border-color: lightskyblue;
+    box-shadow: 0 0 8px rgba(135,206,250,0.4);
+    outline: none;
+}
+
+/* Login Button */
+.login-card .login-custom {
+    background-color: lightskyblue;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 12px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-card .login-custom:hover {
+    background-color: deepskyblue;
+    transform: translateY(-2px);
+}
+
+/* Register link for student */
+.login-card .register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-card .register-link a {
+    color: lightskyblue;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-card .register-link a:hover {
+    color: deepskyblue;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 30px 20px;
+        margin: 30px 10px;
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem;
+    }
+}
