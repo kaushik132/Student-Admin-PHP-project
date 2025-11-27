@@ -1,31 +1,23 @@
-<!-- header  -->
-<?php include 'header.php'  ?>
-<section id="manageStudents" class="container py-5">
+<?php
+require_once "auth.php";
+adminOnly();
+include "db.php"; // database connection
+?>
+<?php include 'header.php'; ?>
 
-  <!-- Add New Student Form -->
-  <div class="card shadow-sm p-4 mb-5 mx-auto" style="max-width: 600px;">
-    <h2 class="mb-4 text-center">Add New Student</h2>
-    <form>
-      <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="Enter student name">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="Enter student email">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Course</label>
-        <input type="text" class="form-control" placeholder="Enter course name">
-      </div>
-      <button type="submit" class="btn btn-primary w-100">Add Student</button>
-    </form>
-  </div>
+<section id="manageStudents" class="container py-5">
 
   <!-- Student List Table -->
   <div class="card shadow-sm p-4">
     <h2 class="mb-4">Student List</h2>
     <div class="table-responsive">
+
+      <?php
+      // Fetch all students (status = 1)
+      $sql = "SELECT id, name, email, course FROM users WHERE status = 1 ORDER BY id DESC";
+      $result = mysqli_query($conn, $sql);
+      ?>
+
       <table class="table table-hover align-middle">
         <thead class="table-light">
           <tr>
@@ -35,38 +27,39 @@
             <th>Actions</th>
           </tr>
         </thead>
+
         <tbody>
-          @foreach($allstudent as $all)
-  
+          <?php
+          if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+          ?>
           <tr>
-            
-            <td>Alice Johnson</td>
-            <td>alice@example.com</td>
-            <td>Computer Science</td>
+            <td><?= htmlspecialchars($row['name']) ?></td>
+            <td><?= htmlspecialchars($row['email']) ?></td>
+            <td><?= htmlspecialchars($row['course']) ?></td>
+
             <td>
-              <button class="btn btn-sm btn-warning">Edit</button>
-              <button class="btn btn-sm btn-danger">Remove</button>
+              <a href="edit-manage-students.php?id=<?= $row['id'] ?>">
+                <button class="btn btn-sm btn-warning">Edit</button>
+              </a>
+
+              <a href="delete-student.php?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure?')">
+                <button class="btn btn-sm btn-danger">Remove</button>
+              </a>
             </td>
           </tr>
-          @endforeach
-          <tr>
-            <td>Bob Smith</td>
-            <td>bob@example.com</td>
-            <td>Marketing</td>
-            <td>
-              <button class="btn btn-sm btn-warning">Edit</button>
-              <button class="btn btn-sm btn-danger">Remove</button>
-            </td>
-          </tr>
+          <?php
+              }
+          } else {
+              echo "<tr><td colspan='4' class='text-center'>No students found.</td></tr>";
+          }
+          ?>
         </tbody>
       </table>
+
     </div>
   </div>
 
 </section>
 
-
-
-
-<!-- footer  -->
-<?php include 'footer.php'  ?>
+<?php include 'footer.php'; ?>

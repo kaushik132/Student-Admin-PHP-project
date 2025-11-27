@@ -31,7 +31,8 @@
        <ul class="list-unstyled">
 
             <li><a href="index.php" class="text-decoration-none">Home</a></li>
-            <li><a href="internships.php" class="text-decoration-none">Active Internships</a></li>
+            <li><a href="application-list.php" class="text-decoration-none">Application List</a></li>
+            <li><a href="admin-internships.php" class="text-decoration-none">Active Internships</a></li>
             <li><a href="admin-add-internship.php" class="text-decoration-none">Add Internship</a></li>
             <li><a href="manage-students.php" class="text-decoration-none">Manage Students</a></li>
             <li><a href="admin-profile.php" class="text-decoration-none">My Profile</a></li>
@@ -45,7 +46,8 @@
     <h1>Admin Dashboard</h1>
     <ul class="nav justify-content-center align-items-center" id="dashboardMenu">
         <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="internships.php" class="nav-link">Active Internships</a></li>
+        <li class="nav-item"><a href="application-list.php" class="nav-link">Application List</a></li>
+        <li class="nav-item"><a href="admin-internships.php" class="nav-link">Active Internships</a></li>
         <li class="nav-item"><a href="admin-add-internship.php" class="nav-link">Add Internship</a></li>
         <li class="nav-item"><a href="manage-students.php" class="nav-link">Manage Students</a></li>
         <li class="nav-item"><a href="admin-profile.php" class="nav-link">My Profile</a></li>

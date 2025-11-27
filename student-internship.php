@@ -1,78 +1,54 @@
-<!-- header  -->
-<?php include 'student-header.php'  ?>
+<?php
+require_once "auth.php";
+studentOnly();
+
+include 'db.php';  // Database connection file
+?>
+<?php include 'student-header.php'; ?>
 
 <section id="internshipListings" class="py-5">
   <div class="container">
     <h2 class="mb-4 text-center">Internship Listings</h2>
     <div class="row g-4 justify-content-center">
 
-      <!-- Internship Card 1 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card shadow-sm p-3 h-100">
-          <h5 class="card-title">Frontend Web Developer</h5>
-          <p class="mb-1"><strong>Category:</strong> Software</p>
-          <p class="mb-1">Work with HTML, CSS, JS.</p>
-          <p class="mb-1"><strong>Requirements:</strong> React knowledge</p>
-          <p class="mb-1"><strong>Apply by:</strong> 2025-11-01</p>
-          <a href="student-apply.php">
-            <button class="btn btn-primary w-100 mt-2">Apply Now</button>
-          </a>
+      <?php
+      // Fetch all internships
+      $sql = "SELECT * FROM internship ORDER BY id DESC";
+      $result = $conn->query($sql);
 
-        </div>
-      </div>
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+      ?>
+          <div class="col-md-6 col-lg-3">
+            <div class="card shadow-sm p-3 h-100">
+              <h5 class="card-title"><?php echo $row['position_title']; ?></h5>
 
-      <!-- Internship Card 2 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card shadow-sm p-3 h-100">
-          <h5 class="card-title">Marketing Intern</h5>
-          <p class="mb-1"><strong>Category:</strong> Marketing</p>
-          <p class="mb-1">Assist in campaigns and research.</p>
-          <p class="mb-1"><strong>Requirements:</strong> MS Office</p>
-          <p class="mb-1"><strong>Apply by:</strong> 2025-11-05</p>
-          <a href="student-apply.php">
-            <button class="btn btn-primary w-100 mt-2">Apply Now</button>
-          </a>
+              <p class="mb-1"><strong>Company:</strong> <?php echo $row['company_name']; ?></p>
+              <p class="mb-1"><strong>Category:</strong> <?php echo $row['category']; ?></p>
+              <p class="mb-1"><strong>Location:</strong> <?php echo $row['location']; ?></p>
+              <p class="mb-1"><strong>Duration:</strong> <?php echo $row['duration']; ?></p>
+              <p class="mb-1"><strong>Stipend:</strong> <?php echo $row['stipend']; ?></p>
 
-        </div>
-      </div>
+              <p class="mb-1"><?php echo $row['description']; ?></p>
 
-      <!-- Internship Card 3 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card shadow-sm p-3 h-100">
-          <h5 class="card-title">UI/UX Designer</h5>
-          <p class="mb-1"><strong>Category:</strong> Design</p>
-          <p class="mb-1">Design user-friendly interfaces.</p>
-          <p class="mb-1"><strong>Requirements:</strong> Figma, Photoshop</p>
-          <p class="mb-1"><strong>Apply by:</strong> 2025-11-10</p>
-          <a href="student-apply.php">
-            <button class="btn btn-primary w-100 mt-2">Apply Now</button>
-          </a>
+              <p class="mb-1"><strong>Requirements:</strong> <?php echo $row['requirements']; ?></p>
+              <p class="mb-1"><strong>Apply by:</strong> <?php echo $row['apply_by']; ?></p>
 
-        </div>
-      </div>
+              <a href="student-apply.php?id=<?php echo $row['id']; ?>">
+                <button class="btn btn-primary w-100 mt-2">Apply Now</button>
+              </a>
+            </div>
+          </div>
 
-      <!-- Internship Card 4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card shadow-sm p-3 h-100">
-          <h5 class="card-title">Content Writer</h5>
-          <p class="mb-1"><strong>Category:</strong> Content</p>
-          <p class="mb-1">Write blogs and social media posts.</p>
-          <p class="mb-1"><strong>Requirements:</strong> English proficiency</p>
-          <p class="mb-1"><strong>Apply by:</strong> 2025-11-15</p>
-          <a href="student-apply.php">
-            <button class="btn btn-primary w-100 mt-2">Apply Now</button>
-          </a>
-
-        </div>
-      </div>
+      <?php
+        }
+      } else {
+        echo "<p class='text-center'>No internships available right now.</p>";
+      }
+      ?>
 
     </div>
   </div>
 </section>
 
-
-
-
-
-<!-- footer  -->
-<?php include 'footer.php'  ?>
+<?php include 'footer.php'; ?>
